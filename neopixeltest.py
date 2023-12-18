@@ -1,5 +1,11 @@
+# Imports go at the top
+from microbit import *
 import neopixel
+np = neopixel.NeoPixel(pin0, 8)
 
-np[0] = (255, 0, 128)  # first element
-np[-1] = (0, 255, 0)  # last element
-np.show()  # only now will the updated value be shown
+
+# Code in a 'while True:' loop repeats forever
+while True:
+    np = neopixel.NeoPixel(pin0, 8)
+    np[0] = (63, 63, 0)
+    np.show()
